@@ -636,7 +636,7 @@ POST   /webhooks/carriers/tracking
 4. 루트/`dist` 해시가 같은지 확인한다.
 5. 역할별 데모 계정으로 핵심 시나리오를 수동 확인한다.
 6. 정적 호스팅은 `.openai/hosting.json`의 `dist` 설정을 사용한다.
-7. **Vercel**: 프로젝트 `doogo-market`(팀 sanjipaldo)이 이 저장소에 연결돼 있고, 프로덕션 브랜치는 `claude/dashboard-login-redesign-huobyk`다. 루트 `vercel.json`이 빌드 없이 `dist/`를 그대로 올린다(`.vercelignore`로 `server/` 제외). 푸시하면 자동 배포되고, CLI로는 `vercel deploy --prod --scope sanjipaldo`. 같은 저장소의 `doogo-group`(www.doogogroup.com, 루트 `doogo-group`)·`doogo-class`는 다른 브랜치용 프로젝트라 건드리지 않는다. `doogofood`에는 배포하지 않는다. 연동 서버(server/)는 Vercel 정적 배포에 포함되지 않으니 따로 띄우고 `window.DOOGO_API_BASE`를 넣는다.
+7. **Vercel**: 프로젝트 `doogo-market`(팀 sanjipaldo)이 이 저장소(`sanjipaldo/doogo-market`)에 연결돼 있고, 프로덕션 브랜치는 `main`이다 (2026-11-02 통합 저장소 `sanjipaldo/sanjipaldo`의 `claude/dashboard-login-redesign-huobyk` 브랜치에서 이력 그대로 옮김). 루트 `vercel.json`이 빌드 없이 `dist/`를 그대로 올린다(`.vercelignore`로 `server/` 제외). 푸시하면 자동 배포되고, CLI로는 `vercel deploy --prod --scope sanjipaldo`. `doogo-group`(www.doogogroup.com)·`doogo-class`(www.doogoclass.com)는 각각 따로 떨어진 저장소(`sanjipaldo/doogo-group` · `sanjipaldo/doogo-class`)에 연결된 프로젝트라 여기서 건드리지 않는다. `doogofood`에는 배포하지 않는다. 연동 서버(server/)는 Vercel 정적 배포에 포함되지 않으니 따로 띄우고 `window.DOOGO_API_BASE`를 넣는다.
 
 현재 Git 정보:
 
